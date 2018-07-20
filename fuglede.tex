@@ -1,0 +1,241 @@
+\documentclass[12pt]{article}
+
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{accents}
+%----------Commands----------
+
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\closure}[2][3]{%
+  {}\mkern#1mu\overline{\mkern-#1mu#2}}
+
+%\renewcommand{\emptyset}{\O}
+\renewcommand{\phi}{\varphi}
+% for boldface vectors
+\renewcommand{\vec}{\mathbf}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\diam}{\operatorname{diam}}
+
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+\providecommand{\x}{\times}
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{example}[theorem]{Example}
+
+\numberwithin{equation}{subsection}
+
+
+%--------Lecture number
+
+\newcommand{\lecno}{20}
+
+
+%----------Title-------------
+\title{Fuglede Conjecture in $\bbZ_P^2$}
+% \author{Drew C Youngren}
+
+
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+%\setcounter{section}{1}   
+
+\maketitle
+
+\begin{definition}
+    A set $E\subset{\bbR^d}$ is \emph{spectral} if there exists a set $A\in \bbR^d$ such that $\{\chi(a\cdot x)\}_{a\in A}$ is a basis of $L^2(E)$.
+\end{definition}
+
+
+\begin{definition}
+    A set $E\in \bbR^d$ tiles $\bbR^d$ if there exists a set $T\in \bbR^d$ such that \[
+        \sum_{\tau \in T} 1_E(x-\tau) \equiv 1.    
+    \]
+\end{definition}
+
+\begin{lemma}[Magic]\label{magic}
+    Let $E\subset \bbZ_p^2$  and $m\neq (0,0)$. Then if $\hat{1_E}(m)=0$, 
+    \begin{enumerate}[label=(\roman*)]
+        \item $\hat{1_E}(r m) =0$ for all $r\in \bbZ_p$, and
+        \item\label{magic2} $E$ is equi-distributed along lines perpendicular to $m$. 
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    Let $\zeta = e^{-2\pi i/p}$. We have 
+    
+    \begin{align*}
+        \hat{1_E}(m) &= \sum_{x\in \bbZ_p^2} \chi(-x\cdot m)1_E(x) \\
+        \ &= \sum_{t\in \bbZ_p}\sum_{x\cdot m = t} \chi(-x\cdot m)1_E(x)  \\ 
+        \ &= \sum_{t\in \bbZ_p}\chi(-t)n(t)  \\ 
+        \ &= \sum_{t\in \bbZ_p}\zeta^t n(t) =0
+    \end{align*} where $n(t) = |E \cap \{x \in \bbZ_p^2 : x\cdot m = t\}| $. Since $\zeta$ is a $p$th root of unity, its minimal characteristic polynomial is $\sum_{n=0}^{p-1} x^n $, the the coefficients $n(t)$ above are independent of $t$, giving \ref{magic2}.   
+
+    Further, let $r\in \bbZ_p^*$.
+    \begin{align*}
+        \hat{1_E}(r m) &= \sum_{x\in \bbZ_p^2} \chi(- r x\cdot m)1_E(x) \\
+        \ &= \sum_{t\in \bbZ_p}\sum_{x\cdot m = t/r} \chi(-x\cdot (r m)1_E(x)  \\ 
+        \ &= \sum_{t\in \bbZ_p}\chi(-t)n(t/r)  \\ 
+        \ &= \sum_{t\in \bbZ_p}\zeta^t n(t/r) =0
+    \end{align*} because $n(t/r)$ is constant.
+\end{proof}
+
+\begin{theorem}
+    Suppose $p$ is prime and $p\equiv 3 \mod 4$. Then a set $E\in \bbZ_p^2$ is spectral if and only if it tiles $\bbZ_p^2$.
+\end{theorem}
+
+
+\begin{proof}
+    Suppose $E$ has spectrum $A$. If $|A|=1$, $E$ is a single point and the result is trivial. Else, take $a,a'\in A, a-a'\neq \vec{0}$. Then, 
+    \begin{align*}
+        \hat{1_E}(a-a') &=p^{-2} \sum_{x\in\bbZ_p^2} \chi((a'-a)\cdot  x)1_E(x) \\
+        \ &= &=p^{-2} \sum_{x\in E} \chi(a'\cdot  x) \chi(-a\cdot x) = 0
+    \end{align*} by orthogonality of the basis. 
+
+    Let $m=a-a'$ and so $\hat{1_E}(m)=0$ and Lemma \ref{magic} applies. Thus, $|E| = |A| = k p $.
+
+    If $k>1$, then $|A| >p$ and thus contains every direction. By the above (and Lemma \ref{magic} again), thus implies $\hat{1_E}(m) = 0$ for all nonzero $m$, but then 
+    \[1_E(x) = \sum_m \chi(x\cdot m)\hat{1_E}(m) = \hat{1_E}(\vec 0)\] which is a constant and thus can only be 1, so $E=\bbZ_p^2$ and thus trivially tiles the whole space. 
+    
+    Thus, the only interesting case is $k=1$, which means $n(t) = 1$ from the proof of Lemma \ref{magic}. That is, $E$ has exactly one point on each line orthogonal to $m$, or the map
+    \[\ell_m : x\mapsto m\cdot x \] is a bijection $E\to \bbZ_p$. We can then index the elements of $E$ by \[\ell_m(e_t) = t. \]
+
+    Choose nonzero $m'$ such that $m\cdot m'=0$. Let $T = \{ t m':t\in\bbZ_p \}$.  For all $x\in\bbZ_p^2$, $x-e_j \in T$ if and only if $j=x\cdot m$. Thus $T$ is a tiling set for $E$.  
+
+
+    Now, suppose $E$ has tiling set $T$. 
+        \[1\equiv \sum_{\tau\in T} 1_E(x-\tau) = \sum_{x \in \bbZ_p^2} 1_E(x-\tau)1_T(\tau) = 1_E * 1_T \]
+    Taking the Fourier transform of both sides, we see
+    \[\hat{1}(m) = \hat{1_E}(m) \hat{1_T}(m) \] which must be $0$ for all $m\neq\vec 0$. The only interesting cases are $1 < |T| < p^2$ so there must be some $m\neq\vec 0$ such that $\hat{1_T}(m)\neq 0$, and thus $\hat{1_E}(m) = 0$. 
+
+    Lemma \ref{magic} once again applies, and so as above $|E|=p$, and $E$ has a unique element on each line orthogonal to $m$. Let $A = \{t m:t\in\bbZ_p\}$. To see this is a spectrum for $E$, we need only show it's an orthogonal set. Indeed, $t,s\in Z_p, t\neq s$. 
+    \[\sum_{x\in E} \chi(t m\cdot x) \chi(-s\cdot m) = \hat{1_E}((t-s)m) \] which is 0 by the lemma. 
+
+\end{proof}
+
+
+\end{document}
